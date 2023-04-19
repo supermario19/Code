@@ -1,5 +1,5 @@
-#include "Thread.h"
-#include "CurrentThread.h"
+#include <SCU/IO/util/Thread.h>
+#include <SCU/IO/util/CurrentThread.h>
 
 using namespace SCU::IO::util;
 

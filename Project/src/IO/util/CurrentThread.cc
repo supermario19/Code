@@ -1,4 +1,4 @@
-#include "CurrentThread.h"
+#include <SCU/IO/util/CurrentThread.h>
 #include <syscall.h>
 #include <unistd.h>
 
@@ -6,7 +6,7 @@ namespace SCU {
 namespace IO {
 namespace util {
 namespace CurrentThread {
-    
+
 __thread int t_cacheTid;
 
 void cacheTid()

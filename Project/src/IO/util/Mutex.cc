@@ -1,5 +1,6 @@
-#include "Mutex.h"
-#include "CurrentThread.h"
+#include <SCU/IO/util/CurrentThread.h>
+#include <SCU/IO/util/Mutex.h>
+
 using namespace SCU::IO::util;
 
 void Mutex::lock()

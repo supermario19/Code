@@ -1,12 +1,12 @@
 #ifndef SCU_IO_UTIL_MUTEX_H
 #define SCU_IO_UTIL_MUTEX_H
+#include <SCU/IO/util/UnCopyable.h>
 #include <assert.h>
 #include <mutex>
-
 namespace SCU {
 namespace IO {
 namespace util {
-class Mutex {
+class Mutex : UnCopyable {
 public:
     Mutex() : holder_(0) {}
 
@@ -14,8 +14,8 @@ public:
     {
         assert(holder_ == 0);
     }
-    
-    std::mutex &getMutex()
+
+    std::mutex& getMutex()
     {
         return mutex_;
     }
@@ -33,7 +33,7 @@ private:
     std::mutex mutex_;
 };
 
-class MutexGuard {
+class MutexGuard : UnCopyable {
 public:
     explicit MutexGuard(Mutex& mutex) : mutex_(mutex)
     {

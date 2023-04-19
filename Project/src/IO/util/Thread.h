@@ -1,15 +1,16 @@
 #ifndef SCU_IO_UTIL_THREAD_H
 #define SCU_IO_UTIL_THREAD_H
+#include <SCU/IO/util/CountDownLatch.h>
+#include <SCU/IO/util/UnCopyable.h>
 #include <functional>
 #include <iostream>
 #include <string>
 #include <thread>
-#include <SCU/IO/util/CountDownLatch.h>
 
 namespace SCU {
 namespace IO {
 namespace util {
-class Thread {
+class Thread : UnCopyable {
     using ThreadFunc = std::function<void()>;
 
 public:
@@ -47,6 +48,7 @@ private:
     std::thread th_;
     bool        started_;
     int         tid_;
+
 private:
     CountDownLatch latch_;
 };
