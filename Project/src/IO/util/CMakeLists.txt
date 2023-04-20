@@ -5,6 +5,8 @@ set(util_src
    Condition.cc
    CountDownLatch.cc
    Timestamp.cc
+   LogStream.cc
+   Logger.cc
   )
 
 add_library(util ${util_src})
