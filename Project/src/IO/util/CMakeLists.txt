@@ -4,6 +4,7 @@ set(util_src
    Mutex.cc
    Condition.cc
    CountDownLatch.cc
+   Timestamp.cc
   )
 
 add_library(util ${util_src})

@@ -12,3 +12,6 @@ target_link_libraries(Condition_test util)
 
 add_executable(CountDownLatch_test CountDownLatch_test.cc)
 target_link_libraries(CountDownLatch_test util)
+
+add_executable(Timestamp_test Timestamp_test.cc)
+target_link_libraries(Timestamp_test util)
