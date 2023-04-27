@@ -106,7 +106,8 @@ inline Logger::Level Logger::logLevel()
     if (SCU::IO::util::Logger::logLevel() <= SCU::IO::util::Logger::INFO)  \
     SCU::IO::util::Logger(__FILE__, __LINE__).stream()
 #define LOG_WARN                                                           \
-    nty::Logger(__FsLE__, __LINE__, SCU::IO::util::Logger::WARN).stream()
+    SCU::IO::util::Logger(__FILE__, __LINE__, SCU::IO::util::Logger::WARN) \
+        .stream()
 #define LOG_ERROR                                                          \
     SCU::IO::util::Logger(__FILE__, __LINE__,                              \
                           SCU::IO::util::Logger::ERROR)                    \

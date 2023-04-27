@@ -1,0 +1,2 @@
+add_executable(EventLoop_test1 EventLoop_test1.cc)
+target_link_libraries(EventLoop_test1 util core)
