@@ -10,14 +10,14 @@ namespace CurrentThread {
 
 __thread int         t_cacheTid = 0;
 __thread char        t_tidString[32];
-__thread int         t_tidStringLength = 6;
+__thread int         t_tidStringLength = 7;
 __thread const char* t_threadName = "unknow";
 
 void cacheTid()
 {
     if (t_cacheTid == 0) {
         t_cacheTid = static_cast<int>(::syscall(SYS_gettid));
-        t_tidStringLength = snprintf(t_tidString, 6, "%5d", t_cacheTid);
+        t_tidStringLength = snprintf(t_tidString, 7, "%6d", t_cacheTid);
     }
 }
 

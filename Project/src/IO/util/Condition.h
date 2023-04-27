@@ -19,8 +19,8 @@ public:
     void wait();
 
 private:
-    Mutex&                  mutex_;
-    std::condition_variable condition_;
+    Mutex&                      mutex_;
+    std::condition_variable_any condition_;
 };
 }  // namespace util
 }  // namespace IO

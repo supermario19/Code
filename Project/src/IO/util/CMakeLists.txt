@@ -7,6 +7,7 @@ set(util_src
    Timestamp.cc
    LogStream.cc
    Logger.cc
+   ThreadPool.cc
   )
 
 add_library(util ${util_src})

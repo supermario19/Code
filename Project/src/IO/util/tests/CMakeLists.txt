@@ -18,3 +18,6 @@ target_link_libraries(Timestamp_test util)
 
 add_executable(Logger_test Logger_test.cc)
 target_link_libraries(Logger_test util)
+
+add_executable(ThreadPool_test ThreadPool_test.cc)
+target_link_libraries(ThreadPool_test util)
